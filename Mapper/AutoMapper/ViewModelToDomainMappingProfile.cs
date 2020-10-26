@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Mapper.Entities.OuterSourceWrapper;
+using Mapper.Models.OuterDestWrapper;
 
 namespace Mapper.AutoMapper
 {
@@ -7,6 +9,12 @@ namespace Mapper.AutoMapper
         public ViewModelToDomainMappingProfile()
         {
             CreateMap<UserViewModel, AppUser>().ForMember(x => x.FullName, option => option.MapFrom(source => source.Name));
+
+            // Mapping nested object
+            CreateMap<OuterDest, OuterSource>();
+            CreateMap<InnerDest, InnerSource>();
+
+            //Projection
         }
     }
 }

@@ -5834,11 +5834,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Hoc Tap\\NetCore\\Mapper\\Mapper\\Mapper.csproj",
+      "projectUniqueName": "E:\\Hoc Tap\\NetCore\\AutoMapper\\Mapper\\Mapper.csproj",
       "projectName": "Mapper",
-      "projectPath": "E:\\Hoc Tap\\NetCore\\Mapper\\Mapper\\Mapper.csproj",
+      "projectPath": "E:\\Hoc Tap\\NetCore\\AutoMapper\\Mapper\\Mapper.csproj",
       "packagesPath": "C:\\Users\\tantn\\.nuget\\packages\\",
-      "outputPath": "E:\\Hoc Tap\\NetCore\\Mapper\\Mapper\\obj\\",
+      "outputPath": "E:\\Hoc Tap\\NetCore\\AutoMapper\\Mapper\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
