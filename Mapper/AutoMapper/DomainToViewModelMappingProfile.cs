@@ -20,6 +20,10 @@ namespace Mapper.AutoMapper
             .ForMember(dest => dest.EventDate, opt => opt.MapFrom(src => src.Date.Date))
             .ForMember(dest => dest.EventHour, opt => opt.MapFrom(src => src.Date.Hour))
             .ForMember(dest => dest.EventMinute, opt => opt.MapFrom(src => src.Date.Minute));
+
+
+            // List and arrays
+            CreateMap<ListArraySource, ListArrayDestination>();
         }
     }
 }

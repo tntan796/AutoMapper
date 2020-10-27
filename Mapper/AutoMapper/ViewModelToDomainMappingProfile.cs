@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using Mapper.Entities;
 using Mapper.Entities.OuterSourceWrapper;
+using Mapper.Models;
 using Mapper.Models.OuterDestWrapper;
 
 namespace Mapper.AutoMapper
@@ -14,7 +16,10 @@ namespace Mapper.AutoMapper
             CreateMap<OuterDest, OuterSource>();
             CreateMap<InnerDest, InnerSource>();
 
-            //Projection
+            // Projection
+
+            // List and arrays
+            CreateMap<ListArrayDestination, ListArraySource> ();
         }
     }
 }

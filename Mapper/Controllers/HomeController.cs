@@ -7,6 +7,7 @@ using Mapper.Entities.OuterSourceWrapper;
 using Mapper.Models.OuterDestWrapper;
 using System;
 using Mapper.Entities;
+using System.Collections.Generic;
 
 namespace Mapper.Controllers
 {
@@ -64,6 +65,24 @@ namespace Mapper.Controllers
             };
             var eventForm = _mapper.Map<ProjectionCalenderEvent, ProjectionCalenderEventForm>(calendarEvent);
             return Ok(eventForm);
+        }
+
+        [HttpGet("ListArrays")]
+        public IActionResult ListArrays()
+        {
+            var sources = new[]
+            {
+                new ListArraySource() { Value = 5 },
+                new ListArraySource() { Value = 5 },
+                new ListArraySource() { Value = 6 },
+            };
+
+            IEnumerable<ListArrayDestination> ienumerableDest = _mapper.Map<ListArraySource[], IEnumerable<ListArrayDestination>>(sources);
+            ICollection<ListArrayDestination> icollectionDest = _mapper.Map<ListArraySource[], ICollection<ListArrayDestination>>(sources);
+            IList<ListArrayDestination> ilistDest = _mapper.Map<ListArraySource[], IList<ListArrayDestination>>(sources);
+            List<ListArrayDestination> listDest = _mapper.Map<ListArraySource[], List<ListArrayDestination>>(sources);
+            ListArrayDestination[] arrayDest = _mapper.Map<ListArraySource[], ListArrayDestination[]>(sources);
+            return Ok(ienumerableDest);
         }
     }
 }
